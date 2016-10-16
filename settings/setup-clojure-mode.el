@@ -305,6 +305,11 @@
 (defadvice cljr-find-usages (before setup-grep activate)
   (window-configuration-to-register ?$))
 
+;; lispy-mode for lispy languages
+(add-hook 'clojure-mode-hook (lambda () (lispy-mode 1)))
+(add-hook 'common-lisp-mode (lambda () (lispy-mode 1)))
+(add-hook 'emacs-lisp-mode-hook (lambda () (lispy-mode 1)))
+
 ;; ------------
 
 ;; TODO: Loot more stuff from:

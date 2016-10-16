@@ -6,7 +6,8 @@
 ;; Completion that uses many different methods to find options.
 (global-set-key (kbd "C-.") 'hippie-expand-no-case-fold)
 (global-set-key (kbd "C-:") 'hippie-expand-lines)
-(global-set-key (kbd "C-,") 'completion-at-point)
+(global-set-key (kbd "C-,") 'completion-at-point) ;; lispy overrides this key-binding
+(global-set-key (kbd "<f5>") 'completion-at-point)
 
 (require 'misc)
 (global-set-key (kbd "s-.") 'copy-from-above-command)
@@ -20,7 +21,7 @@
 (global-set-key (kbd "C-x C-m") 'smex)
 
 ;; Expand region (increases selected region by semantic units)
-(global-set-key (if is-mac (kbd "C-@") (kbd "C-'")) 'er/expand-region)
+(global-set-key (if is-mac (kbd "C-@") (kbd "C-#")) 'er/expand-region)
 
 ;; Experimental multiple-cursors
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
@@ -28,24 +29,24 @@
 (global-set-key (kbd "C-S-c C-a") 'mc/edit-beginnings-of-lines)
 
 ;; Mark additional regions matching current region
-(global-set-key (kbd "M-æ") 'mc/mark-all-dwim)
-(global-set-key (kbd "C-å") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-æ") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-Æ") 'mc/mark-more-like-this-extended)
-(global-set-key (kbd "M-å") 'mc/mark-all-in-region)
+(global-set-key (kbd "M-]") 'mc/mark-all-dwim)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-M->") 'mc/mark-more-like-this-extended)
+(global-set-key (kbd "M-[") 'mc/mark-all-in-region)
 
 ;; Symbol and word specific mark-more
-(global-set-key (kbd "s-æ") 'mc/mark-next-word-like-this)
-(global-set-key (kbd "s-å") 'mc/mark-previous-word-like-this)
-(global-set-key (kbd "M-s-æ") 'mc/mark-all-words-like-this)
+(global-set-key (kbd "s->") 'mc/mark-next-word-like-this)
+(global-set-key (kbd "s-<") 'mc/mark-previous-word-like-this)
+(global-set-key (kbd "M-s->") 'mc/mark-all-words-like-this)
 (global-set-key (kbd "s-Æ") 'mc/mark-next-symbol-like-this)
 (global-set-key (kbd "s-Å") 'mc/mark-previous-symbol-like-this)
 (global-set-key (kbd "M-s-Æ") 'mc/mark-all-symbols-like-this)
 
 ;; Extra multiple cursors stuff
-(global-set-key (kbd "C-~") 'mc/reverse-regions)
+(global-set-key (kbd "C-^") 'mc/reverse-regions)
 (global-set-key (kbd "M-~") 'mc/sort-regions)
-(global-set-key (kbd "H-~") 'mc/insert-numbers)
+(global-set-key (kbd "s-@") 'mc/insert-numbers)
 
 (global-set-key (kbd "C-S-<mouse-1>") 'mc/add-cursor-on-click)
 
@@ -56,7 +57,7 @@
 (global-set-key (kbd "C-x r t") 'inline-string-rectangle)
 
 ;; Quickly jump in document with ace-jump-mode
-(define-key global-map (kbd "C-ø") 'ace-jump-mode)
+(define-key global-map (kbd "M-+") 'ace-jump-mode)
 
 ;; Perform general cleanup.
 (global-set-key (kbd "C-c n") 'cleanup-buffer)
@@ -161,7 +162,7 @@
 (global-set-key (kbd "C-x M-w") 'copy-current-file-path)
 
 ;; Window switching
-(windmove-default-keybindings) ;; Shift+direction
+(windmove-default-keybindings) ;; Shift+direction TODO: think about it
 (global-set-key (kbd "C-x -") 'toggle-window-split)
 (global-set-key (kbd "C-x C--") 'rotate-windows)
 (global-unset-key (kbd "C-x C-+")) ;; don't zoom like this
@@ -293,7 +294,7 @@
 
 ;; Jump from file to containing directory
 (global-set-key (kbd "C-x C-j") 'dired-jump) (autoload 'dired-jump "dired")
-(global-set-key (kbd "C-x M-j") '(λ (dired-jump 1)))
+(global-set-key (kbd "C-x M-j") '(lambda () (interactive) (dired-jump 1)))
 
 ;; Easy-mode fullscreen rgrep
 (global-set-key (kbd "M-s s") 'git-grep-fullscreen)
