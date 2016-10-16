@@ -3,6 +3,8 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        LaTeX-insert-left-brace
+        TeX-insert-backslash
         abbrev-prefix-mark
         ac-complete
         adv-dash
@@ -103,6 +105,7 @@
         paredit-backward
         paredit-backward-barf-sexp
         paredit-backward-down
+        paredit-backward-kill-word
         paredit-backward-slurp-sexp
         paredit-backward-up
         paredit-close-curly

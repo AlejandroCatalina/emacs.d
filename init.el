@@ -1,4 +1,11 @@
 ;; Turn off mouse interface early in startup to avoid momentary display
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
@@ -56,8 +63,14 @@
 ;; Install extensions if they're missing
 (defun init--install-packages ()
   (packages-install
-   '(magit
+   '(auctex
+     magit
      edn
+     elpy
+     ein
+     py-autopep8
+     material-theme
+     better-defaults
      inflections
      hydra
      paredit
@@ -92,8 +105,10 @@
      groovy-mode
      prodigy
      cider
+     lispy
      yesql-ghosts
      string-edit
+     which-key
      )))
 
 (condition-case nil
@@ -101,6 +116,7 @@
   (error
    (package-refresh-contents)
    (init--install-packages)))
+
 
 ;; Lets start with a smattering of sanity
 (require 'sane-defaults)
@@ -117,6 +133,10 @@
 (setq guide-key/recursive-key-sequence-flag t)
 (setq guide-key/popup-window-position 'bottom)
 
+;; which-key
+(require 'which-key)
+(which-key-mode)
+
 ;; Setup extensions
 (eval-after-load 'ido '(require 'setup-ido))
 (eval-after-load 'org '(require 'setup-org))
@@ -130,6 +150,17 @@
 (require 'setup-ffip)
 (require 'setup-html-mode)
 (require 'setup-paredit)
+(require 'setup-python)
+(require 'setup-mu4e)
+
+(defun python-shell-completion-native-try ()
+  "Return non-nil if can trigger native completion."
+  (let ((python-shell-completion-native-enable t)
+        (python-shell-completion-native-output-timeout
+         python-shell-completion-native-try-output-timeout))
+    (python-shell-completion-native-get-completions
+     (get-buffer-process (current-buffer))
+     nil "_")))
 
 (require 'prodigy)
 (global-set-key (kbd "C-x M-m") 'prodigy)
@@ -215,7 +246,8 @@
 ;; Misc
 (require 'project-archetypes)
 (require 'my-misc)
-(when is-mac (require 'mac))
+(when is-mac
+  (require 'mac))
 
 ;; Elisp go-to-definition with M-. and back again with M-,
 (autoload 'elisp-slime-nav-mode "elisp-slime-nav")
