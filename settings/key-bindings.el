@@ -209,8 +209,8 @@
 (global-set-key (kbd "C-r") 'isearch-backward-use-region)
 
 ;; Like isearch-*-use-region, but doesn't fuck with the active region
-(global-set-key (kbd "C-S-s") 'isearch-forward)
-(global-set-key (kbd "C-S-r") 'isearch-backward)
+(global-set-key (kbd "C-S-s") 'isearch-forward-regexp)
+(global-set-key (kbd "C-S-r") 'isearch-backward-regexp)
 
 ;; Move more quickly
 (global-set-key (kbd "C-S-n") (λ (ignore-errors (next-line 5))))
