@@ -66,6 +66,7 @@
    '(auctex
      indent-guide
      cdlatex
+     google-this
      magit
      edn
      elpy
@@ -118,6 +119,9 @@
   (error
    (package-refresh-contents)
    (init--install-packages)))
+
+(google-this-mode 1)
+(global-set-key (kbd "C-x G") 'google-this-mode-submap)
 
 
 ;; Lets start with a smattering of sanity

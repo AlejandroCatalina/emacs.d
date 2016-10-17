@@ -10,7 +10,7 @@
  '(ido-use-filename-at-point nil)
  '(package-selected-packages
    (quote
-    (indent-guide lispy which-key mu4e auctex ein py-autopep8 elpy material-theme string-edit yesql-ghosts prodigy groovy-mode clojure-mode-extra-font-locking dockerfile-mode elisp-slime-nav whitespace-cleanup-mode highlight-escape-sequences restclient nodejs-repl guide-key simple-httpd ido-at-point ido-vertical-mode smartparens yasnippet css-eldoc dired-details flx-ido f flx flycheck-clojure flycheck-pos-tip flycheck fill-column-indicator markdown-mode visual-regexp htmlize gist move-text paredit hydra inflections edn magit better-defaults)))
+    (google-this cdlatex indent-guide lispy which-key mu4e auctex ein py-autopep8 elpy material-theme string-edit yesql-ghosts prodigy groovy-mode clojure-mode-extra-font-locking dockerfile-mode elisp-slime-nav whitespace-cleanup-mode highlight-escape-sequences restclient nodejs-repl guide-key simple-httpd ido-at-point ido-vertical-mode smartparens yasnippet css-eldoc dired-details flx-ido f flx flycheck-clojure flycheck-pos-tip flycheck fill-column-indicator markdown-mode visual-regexp htmlize gist move-text paredit hydra inflections edn magit better-defaults)))
  '(safe-local-variable-values
    (quote
     ((eval font-lock-add-keywords nil
