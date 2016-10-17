@@ -4,7 +4,12 @@
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
 (setq TeX-save-query nil)
-;; (setq TeX-PDF-mode t)
+(setq TeX-PDF-mode t)
+(add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
+(advice-add 'TeX-command-master :before (lambda (&rest args)
+                                              (save-buffer)))
+(add-hook 'LaTeX-mode-hook 'smartparens-mode)
+
 
 (require 'flymake)
 
