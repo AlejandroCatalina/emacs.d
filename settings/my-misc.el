@@ -40,6 +40,11 @@
 (global-set-key (kbd "C-x 8 ( c )") (λ (insert "©")))
 (global-set-key (kbd "C-x 8 v") (λ (insert "✓")))
 
+(when (require 'indent-guide)
+  (add-hook 'prog-mode-hook 'indent-guide-mode))
+
+(global-prettify-symbols-mode)
+
 ;; Add JSP expansions to html-mode
 (eval-after-load "sgml-mode" '(require 'jsp-expansions))
 
