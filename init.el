@@ -64,6 +64,8 @@
 (defun init--install-packages ()
   (packages-install
    '(auctex
+     indent-guide
+     cdlatex
      magit
      edn
      elpy
