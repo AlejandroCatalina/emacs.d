@@ -51,5 +51,15 @@
 ;; A bit of misc cargo culting in misc.el
 (setq xterm-mouse-mode t)
 
+(defun my-round-nb (start end)
+  "round the nb of the region."
+  (interactive "r")
+  (save-restriction
+    (narrow-to-region start end)
+    (goto-char 1)
+    (let ((case-fold-search nil))
+      (while (search-forward-regexp "\\([0-9]+\\.[0-9]+\\)" nil t)
+        (replace-match (format "%0.2f" (string-to-number (match-string 1)))
+                       )))))
 
 (provide 'my-misc)
