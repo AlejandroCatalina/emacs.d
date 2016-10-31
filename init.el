@@ -64,6 +64,7 @@
 (defun init--install-packages ()
   (packages-install
    '(auctex
+     helm-bibtex
      indent-guide
      cdlatex
      google-this
@@ -97,6 +98,7 @@
      ido-at-point
      simple-httpd
      guide-key
+     pdf-tools
      nodejs-repl
      restclient
      highlight-escape-sequences
@@ -112,7 +114,7 @@
      yesql-ghosts
      string-edit
      which-key
-     )))
+     org-ref)))
 
 (condition-case nil
     (init--install-packages)
@@ -158,6 +160,9 @@
 (require 'setup-paredit)
 (require 'setup-python)
 (require 'setup-mu4e)
+(require 'setup-erc)
+(require 'setup-latex)
+
 
 (defun python-shell-completion-native-try ()
   "Return non-nil if can trigger native completion."
