@@ -25,7 +25,7 @@
   (interactive)
   (when (boundp 'magnars/presentation-font)
     ;; (set-face-attribute 'default nil :font magnars/presentation-font)
-    (set-frame-font "-APPL-Monaco-normal-normal-normal-*-12-*-*-*-*-0-iso10646-1")))
+    (set-frame-font "-APPL-Monaco-normal-normal-normal-*-13-*-*-*-*-0-iso10646-1")))
 
 (defun use-default-theme ()
   (interactive)
@@ -33,7 +33,7 @@
   (load-theme 'default-black)
   (when (boundp 'magnars/default-font)
     ;; (set-face-attribute 'default nil :font magnars/default-font)
-    (set-frame-font "-APPL-Monaco-normal-normal-normal-*-12-*-*-*-*-0-iso10646-1")))
+    (set-frame-font "-APPL-Monaco-normal-normal-normal-*-13-*-*-*-*-0-iso10646-1")))
 
 (defun toggle-presentation-mode ()
   (interactive)
