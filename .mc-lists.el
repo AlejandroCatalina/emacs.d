@@ -3,6 +3,7 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        LaTeX-babel-insert-hyphen
         LaTeX-insert-left-brace
         TeX-font
         TeX-insert-backslash
@@ -85,6 +86,7 @@
         lispy-quotes
         live-cycle-clj-coll
         magit-stage-item
+        mark-sexp
         markdown-enter-key
         markdown-exdent-or-delete
         markdown-insert-link
