@@ -15,7 +15,35 @@
 
 (defvar ac-source-hy-keywords
   `((candidates .
-                '("!=" "!=" "%" "%=" "&" "&=" "*" "*" "**" "**=" "*=" "*map" "+" "+" "+=" "," "-" "-" "." "/" "/" "//" "//=" "/=" "<" "<" "<<" "<<=" "<=" "<=" "=" "=" ">" ">" ">=" ">=" ">>" ">>=" "@" "@=" "^" "^=" "-=" "->" "->>" "accumulate" "and" "apply" "as->" "assert" "assoc" "break" "butlast" "calling-module-name" "car" "cdr" "chain" "combinations" "compress" "cond" "cons" "continue" "count" "cut" "cycle" "dec" "def" "defclass" "defmacro" "defmacro/g-bang" "defmain" "defn" "defreader" "del" "dict-comp" "disassemble" "dispatch-reader-macro" "distinct" "do" "doto" "drop" "drop-last" "drop-while" "eval" "eval-and-compile" "eval-when-compile" "except" "filter" "first" "flatten" "fn" "for" "for*" "fraction" "genexpr" "gensym" "get" "global" "group-by" "ideas" "ideas" "identity" "if" "if*" "if-not" "if-python2" "import" "in" "inc" "input" "integer" "interleave" "interpose" "is" "is-coll" "is-cons" "is-empty" "is-even" "is-every" "is-float" "is-instance" "is-integer" "is-integer-char" "is-iterable" "is-iterator" "is-keyword" "is-neg" "is-nil" "is-none" "is-not" "is-numeric" "is-odd" "is-pos" "is-string" "is-symbol" "is-zero" "islice" "iterate" "keyword" "koan" "koan" "lambda" "last" "let" "lif" "lif-not" "list*" "list-comp" "macro-error" "macroexpand" "macroexpand-1" "map" "merge-with" "multicombinations" "name" "nonlocal" "not" "not-in" "nth" "or" "partition" "permutations" "product" "quasiquote" "quote" "raise" "range" "read" "read-str" "reduce" "remove" "repeat" "repeatedly" "require" "rest" "second" "set-comp" "setv" "some" "string" "take" "take-nth" "take-while" "tee" "try" "unless" "unquote" "unquote-splicing" "when" "while" "with" "with*" "with-decorator" "with-gensyms" "xor" "yield" "yield-from" "zip" "zip-longest" "|" "|=" "~")))
+                '("!=" "!=" "%" "%=" "&" "&=" "*" "*" "**" "**=" "*=" "*map"
+                  "+" "+" "+=" "," "-" "-" "." "/" "/" "//" "//=" "/=" "<" "<"
+                  "<<" "<<=" "<=" "<=" "=" "=" ">" ">" ">=" ">=" ">>" ">>=" "@"
+                  "@=" "^" "^=" "-=" "->" "->>" "accumulate" "and" "apply"
+                  "as->" "assert" "assoc" "break" "butlast" "calling-module-name"
+                  "car" "cdr" "chain" "combinations" "compress" "cond" "cons"
+                  "continue" "count" "cut" "cycle" "dec" "def" "defclass" "defmacro"
+                  "defmacro/g-bang" "defmain" "defn" "defreader" "del" "dict-comp"
+                  "disassemble" "dispatch-reader-macro" "distinct" "do" "doto"
+                  "drop" "drop-last" "drop-while" "eval" "eval-and-compile"
+                  "eval-when-compile" "except" "filter" "first" "flatten" "fn"
+                  "for" "for*" "fraction" "genexpr" "gensym" "get" "global"
+                  "group-by" "ideas" "ideas" "identity" "if" "if*" "if-not"
+                  "if-python2" "import" "in" "inc" "input" "integer" "interleave"
+                  "interpose" "is" "is-coll" "is-cons" "is-empty" "is-even"
+                  "is-every" "is-float" "is-instance" "is-integer" "is-integer-char"
+                  "is-iterable" "is-iterator" "is-keyword" "is-neg" "is-nil"
+                  "is-none" "is-not" "is-numeric" "is-odd" "is-pos" "is-string"
+                  "is-symbol" "is-zero" "islice" "iterate" "keyword" "koan"
+                  "koan" "lambda" "last" "let" "lif" "lif-not" "list*" "list-comp"
+                  "macro-error" "macroexpand" "macroexpand-1" "map" "merge-with"
+                  "multicombinations" "name" "nonlocal" "not" "not-in" "nth" "or"
+                  "partition" "permutations" "product" "quasiquote" "quote" "raise"
+                  "range" "read" "read-str" "reduce" "remove" "repeat" "repeatedly"
+                  "require" "rest" "second" "set-comp" "setv" "some" "string"
+                  "take" "take-nth" "take-while" "tee" "try" "unless" "unquote"
+                  "unquote-splicing" "when" "while" "with" "with*" "with-decorator"
+                  "with-gensyms" "xor" "yield" "yield-from" "zip" "zip-longest"
+                  "|" "|=" "~")))
   "Keywords known from hy. The command is defined in hyve.hylp.")
 
 (defun hy-defns-macros ()
