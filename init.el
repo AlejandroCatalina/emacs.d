@@ -111,6 +111,7 @@
      prodigy
      cider
      lispy
+     hy-mode
      yesql-ghosts
      string-edit
      which-key
@@ -162,6 +163,7 @@
 (require 'setup-mu4e)
 (require 'setup-erc)
 (require 'setup-latex)
+(require 'setup-lisp)
 
 
 (defun python-shell-completion-native-try ()
