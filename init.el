@@ -112,6 +112,7 @@
      cider
      lispy
      hy-mode
+     rainbow-delimiters
      yesql-ghosts
      string-edit
      which-key
