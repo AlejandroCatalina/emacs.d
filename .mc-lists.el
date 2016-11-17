@@ -26,6 +26,7 @@
         c-electric-semi&comma
         c-electric-slash
         c-electric-star
+        cdlatex-dollar
         change-inner
         change-number-at-point
         change-outer
@@ -78,6 +79,7 @@
         kill-and-retry-line
         kill-region-or-backward-word
         kill-sexp
+        lispy-backward-kill-word
         lispy-braces
         lispy-brackets
         lispy-delete
