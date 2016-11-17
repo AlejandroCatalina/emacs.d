@@ -65,7 +65,11 @@
   (packages-install
    '(auctex
      helm-bibtex
+     helm-ag
      indent-guide
+     helm
+     helm-projectile
+     helm-descbinds
      cdlatex
      google-this
      magit
@@ -149,6 +153,7 @@
 
 ;; Setup extensions
 (eval-after-load 'ido '(require 'setup-ido))
+(eval-after-load 'helm '(require 'setup-helm))
 (eval-after-load 'org '(require 'setup-org))
 (eval-after-load 'dired '(require 'setup-dired))
 (eval-after-load 'magit '(require 'setup-magit))
