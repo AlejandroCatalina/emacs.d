@@ -65,12 +65,14 @@
   (packages-install
    '(auctex
      helm-bibtex
+     helm-swoop
      helm-ag
      indent-guide
      helm
      helm-projectile
      helm-descbinds
      cdlatex
+     jedi
      google-this
      magit
      edn
@@ -120,6 +122,7 @@
      yesql-ghosts
      string-edit
      which-key
+     apropospriate-theme
      org-ref)))
 
 (condition-case nil
