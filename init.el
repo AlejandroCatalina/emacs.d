@@ -64,6 +64,7 @@
 (defun init--install-packages ()
   (packages-install
    '(auctex
+     ac-math
      interleave
      helm-bibtex
      helm-swoop
