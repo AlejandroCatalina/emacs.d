@@ -65,6 +65,7 @@
   (packages-install
    '(auctex
      ac-math
+     zerodark-theme
      interleave
      helm-bibtex
      helm-swoop

@@ -28,7 +28,7 @@
 (defun use-default-theme ()
   (interactive)
   ;; (load-theme 'material)
-  (load-theme 'github)
+  (load-theme 'apropospriate-dark)
   (set-frame-font "-APPL-Monaco-normal-normal-normal-*-13-*-*-*-*-0-iso10646-1"))
 
 (defun toggle-presentation-mode ()
