@@ -62,4 +62,15 @@
         (replace-match (format "%0.2f" (string-to-number (match-string 1)))
                        )))))
 
+(defun unfill-paragraph ()
+  (interactive)
+  (let ((fill-column (point-max)))
+    (fill-paragraph nil)))
+
+(defun unfill-region ()
+  (interactive)
+  (let ((fill-column (point-max)))
+    (fill-region (region-beginning) (region-end) nil)))
+
 (provide 'my-misc)
+
